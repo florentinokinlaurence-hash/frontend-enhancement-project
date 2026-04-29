@@ -2,7 +2,6 @@ function showAlert() {
   alert("Button clicked!");
 }
 
-// Optional: Load components (basic simulation)
 document.addEventListener("DOMContentLoaded", () => {
   loadComponent("navbar", "components/navbar.html");
   loadComponent("footer", "components/footer.html");
@@ -10,8 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function loadComponent(id, file) {
   fetch(file)
-    .then(res => res.text())
+    .then(res => {
+      if (!res.ok) throw new Error("Component not found");
+      return res.text();
+    })
     .then(data => {
       document.getElementById(id).innerHTML = data;
+    })
+    .catch(err => {
+      console.error(err);
     });
 }
