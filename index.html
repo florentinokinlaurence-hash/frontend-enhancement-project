@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Frontend Enhancement Project</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css"/>
 </head>
+
 <body>
 
   <!-- Navbar -->
   <div id="navbar"></div>
 
   <main>
-    <h1>Welcome to the Project</h1>
-    <p>Enhance this frontend!</p>
+    <section class="hero">
+      <h1>Welcome to the Project 🚀</h1>
+      <p>Enhanced UI/UX with interactive features</p>
 
-    <button onclick="showAlert()">Click Me</button>
+      <div class="buttons">
+        <button onclick="showAlert()">Click Me</button>
+        <button onclick="openModal()">Open Modal</button>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+      </div>
+    </section>
   </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Hello 👋</h2>
+      <p>This is an interactive modal window!</p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
 
   <!-- Footer -->
   <div id="footer"></div>
