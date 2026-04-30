@@ -3,39 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frontend Enhancement Project</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar (old feature kept) -->
-  <div id="navbar"></div>
+  <header>
+    <h1>My Website</h1>
+    <button id="darkModeBtn">Dark Mode</button>
+  </header>
 
   <main>
-    <h1>Welcome to the Project</h1>
-    <p>Enhance this frontend!</p>
+    <h2>Welcome</h2>
 
-    <!-- Old button -->
-    <button onclick="showAlert()">Click Me</button>
+    <button id="clickBtn">Click Me</button>
+    <button id="openModalBtn">Open Modal</button>
 
-    <!-- NEW buttons -->
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-    <button onclick="openModal()">Open Modal</button>
+    <p>This is a modal</p>
 
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <p>Hello! This is a modal popup.</p>
+        <button id="closeModalBtn">Close</button>
+      </div>
+    </div>
   </main>
 
-  <!-- MODAL (NEW FEATURE) -->
-  <div id="modal" class="modal hidden">
-    <div class="modal-content">
-      <h2>Hello 👋</h2>
-      <p>This is a modal popup!</p>
-      <button onclick="closeModal()">Close</button>
-    </div>
-  </div>
+  <footer>
+    <p>© 2026 Frontend Project</p>
+  </footer>
 
-  <!-- Footer (old feature kept) -->
-  <div id="footer"></div>
-
-  <script src="assets/js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
