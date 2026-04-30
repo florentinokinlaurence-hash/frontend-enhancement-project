@@ -1,63 +1,29 @@
-/* Base */
+/* ================= OLD BASE STYLES ================= */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
+  padding: 0;
   transition: 0.3s ease;
-  background: #f5f5f5;
-  color: #333;
 }
 
-/* Dark Mode */
-body.dark {
-  background: #121212;
-  color: #f5f5f5;
-}
-
-/* Layout */
 main {
-  padding: 40px;
+  padding: 20px;
   text-align: center;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-}
-
-.buttons {
-  margin-top: 20px;
-}
-
 button {
-  padding: 10px 16px;
-  margin: 5px;
-  border: none;
-  border-radius: 6px;
-  background: #007bff;
-  color: white;
+  padding: 10px 15px;
   cursor: pointer;
-  transition: 0.2s;
+  margin: 5px;
 }
 
-button:hover {
-  transform: scale(1.05);
-  background: #0056b3;
-}
-
-/* Navbar */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 20px;
-  background: #222;
+/* ================= DARK MODE (NEW) ================= */
+body.dark {
+  background: #121212;
   color: white;
-  align-items: center;
 }
 
-nav h2 {
-  margin: 0;
-}
-
-/* Modal */
+/* ================= MODAL (NEW) ================= */
 .modal {
   position: fixed;
   top: 0;
@@ -72,7 +38,7 @@ nav h2 {
 
 .modal-content {
   background: white;
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
   text-align: center;
 }
@@ -81,14 +47,23 @@ nav h2 {
   display: none;
 }
 
-/* Responsive */
+/* ================= NAVBAR (OLD) ================= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #222;
+  color: white;
+}
+
+/* ================= RESPONSIVE DESIGN (NEW) ================= */
 @media (max-width: 600px) {
-  .hero h1 {
-    font-size: 1.8rem;
+  main {
+    padding: 10px;
   }
 
-  nav {
-    flex-direction: column;
-    text-align: center;
+  button {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
